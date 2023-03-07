@@ -11,7 +11,7 @@ pipeline {
         stage('Sending image to DockerHUB') {
             steps { 
                 withCredentials([usernamePassword(credentialsId: 'pahana', passwordVariable: 'mypassword', usernameVariable: 'myusername')]) {
-    sh 'sudo docker push pahanakishore/front'
+    sh 'docker push pahanakishore/front'
 }
             }
         }
